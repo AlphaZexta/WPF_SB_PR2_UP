@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPF_SB_PR2_UP.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SB_PR2_UP"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid>
+        <Menu x:Name="NastroykaKisti" Background="White">
+            <MenuItem Header="Настройка кисти">
+                <Button x:Name="Krasniy" Content="Красный" Click="Krasniy_Click"/>
+                <Button x:Name="Siniy" Content="Синий" Click="Siniy_Click"/>
+                <Button x:Name="Chorniy" Content="Чёрный" Click="Chorniy_Click"/>
+                <Button x:Name="Beliy" Content="Ластик" Click="Beliy_Click"/>
+                <Separator/>
+                <Slider x:Name="Polzuok" Height="25" Width="100" Minimum="1" Maximum="100" Value="20" ValueChanged="Slider_ValueChanged"/>
+            </MenuItem>
+        </Menu>
+        <InkCanvas x:Name="Holst" Margin="0,22,0,0" Background="White">
+            <InkCanvas.DefaultDrawingAttributes>
+                <DrawingAttributes Color="Black" Height="10" Width="10"/>
+            </InkCanvas.DefaultDrawingAttributes>
+        </InkCanvas>
+    </Grid>
+</Window>

@@ -6,13 +6,37 @@
         xmlns:local="clr-namespace:WPF_SB_PR2_UP"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-    <Grid>
-        <Menu>
-            <MenuItem Header="Меню">
-                <Button Content="Изменить цвет фона" Click="MenuItem_Click"/>
-                <Button Content="Инфа о разработчике" Click="MenuItem_Click_1"/>
-                <Button Content="Закрыть" Click="Button_Click"/>
+    <Grid x:Name="Imy">
+        <Menu x:Name="Meny" BorderThickness="1" Background="White">
+            <MenuItem Header="_Цвет фона">
+                <MenuItem x:Name="Krasniy" Header="_Крассый" Click="Krasniy_Click">
+                    <StatusBar DockPanel.Dock="Bottom">
+                        <TextBlock Text="Меняет цвет на красный"/>
+                    </StatusBar>
+                </MenuItem>
+                <MenuItem x:Name="Siniy" Header="_Синий" Click="Siniy_Click">
+                    <StatusBar DockPanel.Dock="Bottom">
+                        <TextBlock Text="Меняет цвет на синий"/>
+                    </StatusBar>
+                </MenuItem>
+                <MenuItem x:Name="Beliy" Header="_Белый" Click="Beliy_Click">
+                    <StatusBar DockPanel.Dock="Bottom">
+                        <TextBlock Text="Меняет цвет на белый"/>
+                    </StatusBar>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="Zakrit" Header="_Закрыть" Click="Zakrit_Click">
+                    <StatusBar DockPanel.Dock="Bottom">
+                        <TextBlock Text="Закрывает окно к чёрту"/>
+                    </StatusBar>
+                </MenuItem>
             </MenuItem>
+            <MenuItem x:Name="ORazrabotchike" Header="_О разработчике" Click="ORazrabotchike_Click"/>
+            <Button x:Name="TipoSiniy" Content="Синий" Click="TipoSiniy_Click"/>
+            <Button x:Name="TipoKrasniy" Content="Красный" Click="TipoKrasniy_Click"/>
+            <Button x:Name="TipoBeliy" Content="Белый" Click="TipoBeliy_Click"/>
+            <Button x:Name="TipoZakrit" Content="Закрыть" Click="TipoZakrit_Click"/>
+            <Button x:Name="ZadanieDva" Content="Задание 2" Click="ZadanieDva_Click"/>
         </Menu>
     </Grid>
 </Window>

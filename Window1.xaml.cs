@@ -22,21 +22,60 @@ namespace WPF_SB_PR2_UP
         public Window1()
         {
             InitializeComponent();
+            Imy.Background = Brushes.Blue;
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void ORazrabotchike_Click(object sender, RoutedEventArgs e)
         {
-            this.Background = Brushes.Gray;
+            MessageBox.Show("Разраб: Шовкун Б.Н.");
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void Zakrit_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Разработчик: Шовкун Б.Н.");
+            this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Beliy_Click(object sender, RoutedEventArgs e)
         {
+            Meny.Background = Brushes.White;
+        }
+
+        private void Siniy_Click(object sender, RoutedEventArgs e)
+        {
+            Meny.Background = Brushes.Blue;
+        }
+
+        private void Krasniy_Click(object sender, RoutedEventArgs e)
+        {
+            Meny.Background = Brushes.Red;
+        }
+
+        private void TipoSiniy_Click(object sender, RoutedEventArgs e)
+        {
+            Meny.Background = Brushes.Blue;
+        }
+
+        private void TipoKrasniy_Click(object sender, RoutedEventArgs e)
+        {
+            Meny.Background = Brushes.Red;
+        }
+
+        private void TipoBeliy_Click(object sender, RoutedEventArgs e)
+        {
+            Meny.Background = Brushes.White;
+        }
+
+        private void TipoZakrit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ZadanieDva_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 window2 = new Window2();
+            window2.Show();
             this.Close();
         }
     }
 }
+
